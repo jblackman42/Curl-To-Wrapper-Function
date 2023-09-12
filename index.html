@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curl Converter</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Convert Curl Command to API Wrapper Function</h1>
+    <p id="instructions">Built for <a href="https://www.npmjs.com/package/ministry-platform-api-wrapper" target="_blank">Ministry Platform API Wrapper</a>. Use Curl Command from <a href="https://kb.ministryplatform.com/kb/develop/swagger-ui" target="_blank">Swagger UI</a> to get the API Wrapper Function.</p>
+    <div class="label-container">
+      <p>Curl Command:</p>
+    </div>
+    <form id="curl-converter">
+      <textarea id="curl-command" placeholder="curl -X GET/POST/PUT/DELETE..."></textarea>
+      <button class="button-82-pushable" type="submit">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          Convert
+        </span>
+      </button>
+    </form>
+    <div class="label-container">
+      <p>API Wrapper Function:</p>
+      <button id="copy-code" title="Copy Code"><i class="material-icons" style="font-size: 18px;">content_copy</i></button>
+    </div>
+    <div id="response-container"></div>
+  </div>
+  
+  <script src="./main.js"></script>
+</body>
+</html>
