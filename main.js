@@ -28,7 +28,7 @@ function convertCurlToFunction(curlCommand) {
     const bodyMatch = curlCommand.match(regex);
     const body = bodyMatch ? JSON.parse(bodyMatch[1]) : {};
 
-    return `await apiClient.request('${method}', '${path}', ${JSON.stringify(queryParams)}, ${JSON.stringify(body)})`;
+    return `await MinistryPlatformAPI.request('${method}', '${path}', ${JSON.stringify(queryParams)}, ${JSON.stringify(body)})`;
   } catch (error) {
     console.error(error);
     return `Error: ${error.message}`;
